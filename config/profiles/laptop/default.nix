@@ -9,7 +9,7 @@
         # Command-line tools
         fzf ripgrep newsboat ffmpeg tealdeer exa 
         pass slop bat tmux
-        libnotify sct update-nix-fetchgit 
+        libnotify sct update-nix-fetchgit pavucontrol pulseaudio
        
         # GUI applications
         firefox mpv anki
@@ -40,13 +40,12 @@
     };
     
 
-    sound.enable = true;
+#    sound.enable = true;
     hardware = {
       pulseaudio.enable = true;
       bluetooth.enable = true;
     };
     users.extraUsers.espo.extraGroups = [ "audio" ];
-    services.blueman.enable = true;
 
      # Install fonts
     fonts.fonts = with pkgs; [
