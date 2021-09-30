@@ -14,6 +14,10 @@
   networking.hostName = "bambam";
   networking.interfaces.wlp0s20f3.useDHCP = true;
   hardware.video.hidpi.enable = lib.mkDefault true;
+  
+  services.udev.extraRules = ''
+    ACTION=="change", SUBSYSTEM=="drm", RUN+="/home/espo/.config/nixos/scripts/hotplug_monitor"
+  '';
 
   boot = {
    extraModprobeConfig = lib.mkDefault ''
