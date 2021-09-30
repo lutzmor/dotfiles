@@ -45,6 +45,7 @@
       pulseaudio.enable = true;
       bluetooth.enable = true;
     };
+    users.extraUsers.espo.extraGroups = [ "audio" ];
     services.blueman.enable = true;
 
      # Install fonts
