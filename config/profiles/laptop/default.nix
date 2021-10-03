@@ -40,7 +40,7 @@
     };
     
     security.rtkit.enable = true;
-    services.bluetooth.enable = true;
+    hardware.bluetooth.enable = true;
     services.pipewire = {
         enable = true;
         alsa.enable = true;
