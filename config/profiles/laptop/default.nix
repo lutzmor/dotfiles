@@ -9,7 +9,7 @@
         # Command-line tools
         fzf ripgrep newsboat ffmpeg tealdeer exa 
         pass slop bat tmux
-        libnotify sct update-nix-fetchgit pavucontrol pulseaudio
+        libnotify sct update-nix-fetchgit pavucontrol
        
         # GUI applications
         firefox mpv anki
