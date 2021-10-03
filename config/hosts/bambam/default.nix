@@ -8,7 +8,7 @@
         ../../profiles/core
 	../../profiles/laptop
 	../../profiles/virtualization
-	./encryption.nix
+	#./encryption.nix
     ];
   
   networking.hostName = "bambam";
