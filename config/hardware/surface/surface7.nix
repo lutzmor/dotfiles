@@ -5,9 +5,9 @@
   # that to enable IPTS, libwacom and other model-dependent config.
 
   imports = [
-	./kernel
+    ./kernel
   ];
-
+  
   nixpkgs.overlays = [
     # post-5.4
     (self: super: { iptsd = super.callPackage ../../overlay/iptsd { }; })
@@ -73,6 +73,7 @@
   services.udev.extraRules = ''
     # iptsd
     KERNEL=="ipts/*", TAG+="systemd";
+    ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="on";
   '';
 
   environment.etc."ipts.conf".text = ''

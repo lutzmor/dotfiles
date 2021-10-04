@@ -8,6 +8,7 @@ in
  gpg = import ./gpg/gpg.nix;
  git = import ./git/git.nix;
  newsboat = import ./newsboat/newsboat.nix;
+ kitty = import ./kitty/kitty.nix;
  firefox = firefoxsettings pkgs;
  zsh = zshsettings pkgs;
 }

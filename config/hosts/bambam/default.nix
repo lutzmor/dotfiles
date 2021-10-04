@@ -7,6 +7,8 @@
 	../../hardware/surface/surface7.nix
         ../../profiles/core
 	../../profiles/laptop
+	../../profiles/wayland
+	../../profiles/sound
 	../../profiles/virtualization
 	#./encryption.nix
     ];
@@ -15,10 +17,6 @@
   networking.interfaces.wlp0s20f3.useDHCP = true;
   hardware.video.hidpi.enable = lib.mkDefault true;
   
-  #services.udev.extraRules = ''
-  #  ACTION=="change", SUBSYSTEM=="drm", RUN+="/usr/bin/hotplug_monitor"
-  #'';
-
   boot = {
    extraModprobeConfig = lib.mkDefault ''
     options i915 enable_fbc=1 enable_rc6=1 modeset=1
@@ -33,30 +31,33 @@
 				"surface_aggregator" "surface_aggregator_registry" "surface_hid" ];
      kernelModules = [ ];
      luks = {
+       fido2Support = true;
        devices."enc" = {
-         device = "/dev/disk/by-uuid/bed42183-4db5-47de-963a-4bdc9572ea2b";
+         device = "/dev/nvme0n1p1";
          preLVM = true;
+	 fido2.credential = "1a3742467558aa5e00dc58197d6e4ee7be4431f0a689c5000aad6c21d94f798b418852dae2262619c1da2be7562ec9dd94888c71a9326fea70dfe16214b5ea8ec0143d030000";
+         fido2.passwordLess = true;
        };
      };
    };
   };
-
+  
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5910dc30-6d3f-478e-997a-66f86d5a5130";
+    { device = "/dev/mapper/enc";
       fsType = "btrfs";
       options = [ "subvol=nixos" "compress=zstd" "autodefrag" "noatime"];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/5910dc30-6d3f-478e-997a-66f86d5a5130";
+    { device = "/dev/mapper/enc";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=zstd" "autodefrag" "noatime"];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3C2C-8D2B";
+    { device = "/dev/disk/by-label/nixos-boot";
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices = [ { device = "/dev/nvme0n1p2"; } ];
 }
