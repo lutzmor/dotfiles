@@ -63,6 +63,18 @@
                     }
                 ];
             };
+            mirror = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+                modules = [
+                    ./config/configuration.nix 
+		            ./config/hosts/mirror
+                    home-manager.nixosModules.home-manager {
+                        home-manager.useGlobalPkgs = true;
+                        home-manager.useUserPackages = true;
+                        home-manager.users.espo = import ./config/users/espo;
+                    }
+                ];
+            };
         };
     };
 }

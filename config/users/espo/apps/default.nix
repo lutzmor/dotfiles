@@ -9,6 +9,7 @@ in
  git = import ./git/git.nix;
  newsboat = import ./newsboat/newsboat.nix;
  kitty = import ./kitty/kitty.nix;
+ vscode = import ./vscode/vscode.nix pkgs;
  firefox = firefoxsettings pkgs;
  zsh = zshsettings pkgs;
 }
