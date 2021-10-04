@@ -61,7 +61,7 @@ exec $HOME/.azotebg
     bindsym $mod+Alt+b exec blueman-manager
 
 ## Sway:
-
+    bindsym $mod+c kill
     bindsym $mod+Shift+c exec sway-utils focused-program-kill
     bindsym $mod+Shift+q exec swaymsg exit
     bindsym $mod+q reload

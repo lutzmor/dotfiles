@@ -41,6 +41,7 @@
         text = ''
           #! ${pkgs.bash}/bin/bash
           systemctl --user import-environment
+	  exec systemctl --user start kanashi.service
           exec systemctl --user start sway.service
         '';
       }
