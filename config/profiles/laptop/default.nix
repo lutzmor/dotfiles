@@ -14,7 +14,7 @@
     fonts.fonts = with pkgs; [
         jetbrains-mono
         roboto
-        (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+        (nerdfonts.override { fonts = [ "JetBrainsMono" , "OperatorMono" ]; })
     ];
 
     networking = {
