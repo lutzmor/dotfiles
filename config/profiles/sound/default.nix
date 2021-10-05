@@ -52,27 +52,27 @@
           { name = "libpipewire-module-session-manager"; }
           { name = libpipewire-module-filter-chain
             args = {
-              node.name =  "rnnoise_source"
-              node.description =  "Noise Canceling source"
-              media.name =  "Noise Canceling source"
+              "node.name" =  "rnnoise_source";
+              "node.description" =  "Noise Canceling source";
+              "media.name" =  "Noise Canceling source";
               filter.graph = {
                   nodes = [
                       {
-                          type = ladspa
-                          name = rnnoise
-                          plugin = ladspa/librnnoise_ladspa
-                          label = noise_suppressor_stereo
+                          "type" = ladspa;
+                          "name" = rnnoise;
+                          "plugin" = ladspa/librnnoise_ladspa;
+                          "label" = noise_suppressor_stereo;
                           control = {
-                            "VAD Threshold (%)" 50.0
+                            "VAD Threshold (%)" = 50.0;
                           }
                       }
                   ]
               }
               capture.props = {
-                node.passive = true
+                "node.passive" = true;
               }
               playback.props = {
-                media.class = Audio/Source
+                "media.class" = "Audio/Source";
               }
             }
           }];
