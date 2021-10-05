@@ -7,7 +7,6 @@
         fzf ripgrep newsboat ffmpeg tealdeer exa 
         pass slop bat tmux
         libnotify sct update-nix-fetchgit pavucontrol pulseaudio
-	xlayoutdisplay 
         chromium mpv anki teams citrix_workspace
         gcc gnumake python3 
     ];
