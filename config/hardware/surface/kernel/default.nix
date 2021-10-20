@@ -1,8 +1,8 @@
-{ config, lib, pkgs, linux_surface, ... }:
+{ config, lib, pkgs, linux-surface, ... }:
  let
   inherit (builtins) readFile;
 
-  patches = linux_surface + "/patches";
+  patches = linux-surface + "/patches";
   surface_kernelPatches = [
     { name = "microsoft-surface-patches";
       patch = null;

@@ -3,6 +3,7 @@
   inherit (pkgs.linux_latest) stdenv version src;
   inherit lib;
   configfile = ./kernel.config;
+  kernelPatches = kernelPatches;
   allowImportFromDerivation = true;
 })
 .overrideAttrs(o: { nativeBuildInputs = o.nativeBuildInputs ++ [ pkgs.zstd pkgs.zlib ]; }) # for zstd compression

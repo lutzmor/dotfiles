@@ -36,8 +36,6 @@
             url = "github:nix-community/neovim-nightly-overlay";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-#        hardware.url = "github:NixOS/nixos-hardware";
     };
 
     # All outputs for the system (configs)
@@ -70,11 +68,12 @@
                     }
                 ];
             };
+
             mirror = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
                     ./config/configuration.nix 
-		            ./config/hosts/mirror
+		    ./config/hosts/mirror
                     home-manager.nixosModules.home-manager {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
