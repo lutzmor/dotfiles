@@ -1,22 +1,6 @@
 { config, lib, pkgs, ... }:
-
 {
-  # move into nixos module, set up a nixos option for surface model, use
-  # that to enable IPTS, libwacom and other model-dependent config.
-
-  imports = [
-    ./kernel
-  ];
-  
-  nixpkgs.overlays = [
-    # post-5.4
-    (self: super: { iptsd = super.callPackage ../../overlay/iptsd { }; })
-  ];
-
   systemd.services = {
-    # not necessary for every model
-    # https://github.com/linux-surface/linux-surface/wiki/Known-Issues-and-FAQ#sleep-script
-    # only for kernels running original IPTS firmware
     surface-sleep = {
       enable = lib.versionOlder config.boot.kernelPackages.kernel.version "5.4";
       before = [ "suspend.target" ];
@@ -28,14 +12,6 @@
         if ps cax | grep bluetoothd && ! bluetoothctl info; then
           bluetoothctl power off
         fi
-
-        ## If you have spontaneous wakeups, you may want to disable
-        ## bluetooth completely, regardless if any devices are connected or not.
-        ## Note that you may be required to re-connect your devices after resume
-        ## if you choose this change.
-        # if ps cax | grep bluetoothd; then
-        #   bluetoothctl power off
-        # fi
       '';
     };
     surface-wake = {
@@ -66,12 +42,8 @@
       '';
     };
   };
-
-  # # not working with meson flag -Dsystemd=true
-  # systemd.packages = [ pkgs.iptsd ];
-  # services.udev.packages = [ pkgs.iptsd ];
+  
   services.udev.extraRules = ''
-    # iptsd
     KERNEL=="ipts/*", TAG+="systemd";
     ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="on";
   '';

@@ -26,15 +26,22 @@
             inputs.nixpkgs.follows = "nixpkgs";
             flake = false;
         };
+        
+        linux-surface = {
+            url = "github:linux-surface/linux-surface";
+	    flake = false;
+	};
 
         neovim-nightly-overlay = {
             url = "github:nix-community/neovim-nightly-overlay";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+#        hardware.url = "github:NixOS/nixos-hardware";
     };
 
     # All outputs for the system (configs)
-    outputs = { home-manager, nixpkgs, nur, neovim-nightly-overlay, st, dwm, ... }: {
+    outputs = { home-manager, nixpkgs, nur, neovim-nightly-overlay, st, dwm, linux-surface, ... }: {
         nixosConfigurations = {
 
             # Laptop config

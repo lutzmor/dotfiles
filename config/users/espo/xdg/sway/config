@@ -145,7 +145,7 @@ bindsym $mod+r mode "resize"
 exec_always import-gsettings
 
 output eDP-1 scale 1
-output "*" background "~/other/wallpapers/wallpaper.jpg" fill
+#output "*" background "~/other/wallpapers/wallpaper.jpg" fill
 input "7847:2311:SEMITEK_USB-HID_Gaming_Keyboard" xkb_layout us
 
 ################################################################################
