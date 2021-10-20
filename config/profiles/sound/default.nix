@@ -11,18 +11,6 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
-        config.pipewire = {
-          "context.properties" = {
-            "link.max-buffers" = 16;
-            "log.level" = 2;
-            "default.clock.rate" = 48000;
-            "default.clock.quantum" = 32;
-            "default.clock.min-quantum" = 32;
-            "default.clock.max-quantum" = 32;
-            "core.daemon" = true;
-            "core.name" = "pipewire-0";
-          };
-        };
         #bluetooth stuff
         media-session.config.bluez-monitor.rules = [
             {

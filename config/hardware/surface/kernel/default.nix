@@ -4,13 +4,6 @@
 
   patches = linux-surface + "/patches";
   surface_kernelPatches = [
-    { name = "microsoft-surface-patches";
-      patch = null;
-      structuredExtraConfig = with lib.kernel; {
-        APDS9960 = module;
-        MISC_IPTS = module;
-      };
-    }
     {
       name = "ms-surface/0001-surface3-oemb";
       patch = patches + "/5.14/0001-surface3-oemb.patch";
