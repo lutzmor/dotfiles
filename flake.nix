@@ -45,6 +45,7 @@
             # Laptop config
             bambam = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
+                specialArgs = { inherit linux-surface; };
                 modules = [
                     ./config/configuration.nix 
 		    ./config/hosts/bambam
