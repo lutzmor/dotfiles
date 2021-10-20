@@ -61,7 +61,7 @@
     }
   ];
   
-  kernel = pkgs.callPackage ./kernel.nix { kernelPatches = surface_kernelPatches };
+  kernel = pkgs.callPackage ./kernel.nix { kernelPatches = surface_kernelPatches; };
   linuxPackages = (pkgs.linuxPackagesFor kernel);
  in
 {
