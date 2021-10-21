@@ -3,12 +3,8 @@
 {
     # Install all the packages
     environment.systemPackages = with pkgs; [
-        feh
-        fzf ripgrep newsboat ffmpeg tealdeer exa 
-        pass slop bat tmux
-        libnotify sct update-nix-fetchgit pavucontrol pulseaudio
-        chromium mpv anki teams
-        gcc gnumake python3 
+        pavucontrol
+        chromium teams
     ];
     
     fonts.fonts = with pkgs; [
