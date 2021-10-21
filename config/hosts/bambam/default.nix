@@ -10,6 +10,7 @@
 	../../profiles/graphical
 	../../profiles/sound
 	../../profiles/virtualization
+        ../../profiles/openssh
 	#./encryption.nix
     ];
   

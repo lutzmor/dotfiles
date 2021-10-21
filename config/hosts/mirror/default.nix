@@ -8,6 +8,7 @@
 	../../profiles/core
 	../../profiles/laptop
 	../../profiles/graphical
+        ../../profiles/openssh
     ];
   
   networking.hostName = "mirror";

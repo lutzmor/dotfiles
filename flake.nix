@@ -35,7 +35,6 @@
                 system = "x86_64-linux";
                 specialArgs = { inherit linux-surface; };
                 modules = [
-                    ./config/configuration.nix 
 		    ./config/hosts/bambam
                     home-manager.nixosModules.home-manager {
                         home-manager.useGlobalPkgs = true;
@@ -51,7 +50,6 @@
             mirror = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
-                    ./config/configuration.nix 
 		    ./config/hosts/mirror
                     home-manager.nixosModules.home-manager {
                         home-manager.useGlobalPkgs = true;
