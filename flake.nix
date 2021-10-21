@@ -14,18 +14,6 @@
             url = "github:nix-community/NUR";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        dwm = {
-            url = "github:notusknot/dwm";
-            inputs.nixpkgs.follows = "nixpkgs";
-            flake = false;
-        };
-
-        st = {
-            url = "github:notusknot/st";
-            inputs.nixpkgs.follows = "nixpkgs";
-            flake = false;
-        };
         
         linux-surface = {
             url = "github:linux-surface/linux-surface";
@@ -39,7 +27,7 @@
     };
 
     # All outputs for the system (configs)
-    outputs = { home-manager, nixpkgs, nur, neovim-nightly-overlay, st, dwm, linux-surface, ... }: {
+    outputs = { home-manager, nixpkgs, nur, neovim-nightly-overlay, linux-surface, ... }: {
         nixosConfigurations = {
 
             # Laptop config
@@ -54,16 +42,6 @@
                         home-manager.useUserPackages = true;
                         home-manager.users.espo = import ./config/users/espo;
                         nixpkgs.overlays = [ 
-                            (final: prev: {
-                                st = prev.st.overrideAttrs (o: {
-                                    src = st;
-                                });
-                            })
-                            (final: prev: {
-                                dwm = prev.dwm.overrideAttrs (o: {
-                                    src = dwm;
-                                });
-                            })
                             nur.overlay neovim-nightly-overlay.overlay 
                         ];
                     }
