@@ -64,7 +64,7 @@ pkgs:
         cp = "cp -riv";
         cat = "bat --paging=never --style=plain";
         fzf = "fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'";
-        ls = "exa -a --icons";
+        #ls = "exa -a --icons";
         tree = "exa --tree --icons";
         zshrc = "nvim $NIXOS_CONDIF_DIR/config/zsh/zsh.nix";
         home = "nvim $NIXOS_CONFIG_DIR/home.nix";

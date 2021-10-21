@@ -1,7 +1,0 @@
-{
-  output "Unknown 0x0555 0x000010A1" mode 2736x1824@59.959 transform 90 position 0,0
-  output "Unknown UWQHD-100-C 0000000000000" mode 3440x1440@59.999 position 1824,0
-}
-{
-  output "Unknown 0x0555 0x000010A1" mode 2376x1824@59.959 position 0,0
-}

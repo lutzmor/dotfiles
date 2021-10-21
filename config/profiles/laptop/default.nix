@@ -10,6 +10,7 @@
     fonts.fonts = with pkgs; [
         jetbrains-mono
         roboto
+        google-fonts
         (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
