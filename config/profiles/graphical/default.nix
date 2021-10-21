@@ -8,10 +8,7 @@
       swayidle
       xwayland
       waybar
-      mako
-      kanshi
       wofi
-      wdisplays
     ];
     wrapperFeatures = {
         base = true; # this is the default, but be explicit for now

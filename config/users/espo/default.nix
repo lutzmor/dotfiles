@@ -26,6 +26,7 @@
      "kitty/moonfly.conf".source = ./configs/kitty/moonfly.conf;
      "kitty/ncmpcpp-kitty.conf".source = ./configs/kitty/ncmpcpp-kitty.conf;
      "kitty/unicode-input-favorites.conf".source = ./configs/kitty/unicode-input-favorites.conf;
+     "mako/config".source = ./configs/mako/config;
     };
     
     home = import ./home { };

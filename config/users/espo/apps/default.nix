@@ -7,5 +7,6 @@ in
  gpg = import ./gpg/gpg.nix;
  git = import ./git/git.nix;
  kitty = import ./kitty/kitty.nix;
+ mako = import ./mako/mako.nix;
  zsh = zshsettings pkgs;
 }
