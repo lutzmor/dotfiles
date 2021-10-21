@@ -45,6 +45,18 @@
   file.".local/share/fonts/OperatorMono-Medium-Regular.otf".source = ./fonts/OperatorMono-Medium-Regular.otf;
   file.".local/share/fonts/OperatorMono-XLight-Italic.otf".source = ./fonts/OperatorMono-XLight-Italic.otf;
   file.".local/share/fonts/OperatorMono-XLight-Regular.otf".source = ./fonts/OperatorMono-XLight-Regular.otf;
+
+  file.".local/share/fonts/OperatorMono-Bold-Italic-NerdFontComplete.otf".source = ./fonts/OperatorMono-Bold-Italic-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Bold-NerdFontComplete.otf".source = ./fonts/OperatorMono-Bold-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Book-Italic-NerdFontComplete.otf".source = ./fonts/OperatorMono-Book-Italic-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Book-NerdFontComplete.otf".source = ./fonts/OperatorMono-Book-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Light-Italic-NerdFontComplete.otf".source = ./fonts/OperatorMono-Light-Italic-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Light-NerdFontComplete.otf".source = ./fonts/OperatorMono-Light-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Medium-Italic-NerdFontComplete.otf".source = ./fonts/OperatorMono-Medium-Italic-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Medium-NerdFontComplete.otf".source = ./fonts/OperatorMono-Medium-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Extra-Light-Italic-NerdFontComplete.otf".source = ./fonts/OperatorMono-Extra-Light-Italic-NerdFontComplete.otf;
+  file.".local/share/fonts/OperatorMono-Extra-Light-NerdFontComplete.otf".source = ./fonts/OperatorMono-Extra-Light-NerdFontComplete.otf;
+
   
   file.".bin/import-gsettings".source = ./bin/import-gsettings;
   file.".bin/partial-screenshot.sh".source = ./bin/partial-screenshot.sh;
