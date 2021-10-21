@@ -4,10 +4,10 @@
   imports =
     [ 
 	(modulesPath + "/installer/scan/not-detected.nix")
-	../../hardware/surface/surface7.nix
-    ../../profiles/core
+	../../hardware/surface/hardware-surface3.nix
+	../../profiles/core
 	../../profiles/laptop
-	../../profiles/wayland
+	../../profiles/graphical
     ];
   
   networking.hostName = "mirror";

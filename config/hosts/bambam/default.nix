@@ -7,7 +7,7 @@
 	../../hardware/hardware-surface7.nix
         ../../profiles/core
 	../../profiles/laptop
-	../../profiles/wayland
+	../../profiles/graphical
 	../../profiles/sound
 	../../profiles/virtualization
 	#./encryption.nix

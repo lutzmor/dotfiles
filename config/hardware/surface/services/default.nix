@@ -28,18 +28,10 @@
       '';
     };
 
-    surface-iptsd = {
-      enable = true;
-      description = "Intel Precise Touch & Stylus Daemon";
-      documentation = [ "https://github.com/linux-surface/iptsd" ];
-      after = [ "dev-ipts-0.device" ];
-      wants = [ "dev-ipts-0.device" ];
+    iptsd = {
+      description = "IPTSD";
+      script = "${pkgs.iptsd}/bin/iptsd";
       wantedBy = [ "multi-user.target" ];
-      serviceConfig.Type = "simple";
-      path = [ pkgs.iptsd ];
-      script = ''
-        iptsd
-      '';
     };
   };
   
