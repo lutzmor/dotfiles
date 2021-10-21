@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "dwm": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1631405620,
-        "narHash": "sha256-phsocZN0Sb/MtjQh5Ofl0QI2BQ59f/ghnxTxS7R7H/Y=",
-        "owner": "notusknot",
-        "repo": "dwm",
-        "rev": "5da29a095c5f5e485eb85ee00559253ac2adedf2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "notusknot",
-        "repo": "dwm",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -162,29 +146,11 @@
     },
     "root": {
       "inputs": {
-        "dwm": "dwm",
         "home-manager": "home-manager",
         "linux-surface": "linux-surface",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
-        "nur": "nur",
-        "st": "st"
-      }
-    },
-    "st": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1627499086,
-        "narHash": "sha256-F8Gbuym5zhrDTgMipEIWuhuqkLgthSiJSdwn7ViNEio=",
-        "owner": "notusknot",
-        "repo": "st",
-        "rev": "7444f4a1526b398b0d8e6988f06e69c8324d042f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "notusknot",
-        "repo": "st",
-        "type": "github"
+        "nur": "nur"
       }
     }
   },
