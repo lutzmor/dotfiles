@@ -11,10 +11,8 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
-        #bluetooth stuff
         media-session.config.bluez-monitor.rules = [
             {
-                # Matches all cards
                 matches = [ { "device.name" = "~bluez_card.*"; } ];
                 actions = {
                     "update-props" = {
@@ -26,9 +24,7 @@
             }
             {
                 matches = [
-                    # Matches all sources
                     { "node.name" = "~bluez_input.*"; }
-                    # Matches all outputs
                     { "node.name" = "~bluez_output.*"; }
                 ];
                 actions = {
