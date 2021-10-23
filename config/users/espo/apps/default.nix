@@ -8,5 +8,7 @@ in
  git = import ./git/git.nix;
  kitty = import ./kitty/kitty.nix;
  mako = import ./mako/mako.nix;
+ qutebrowser = import ./qutebrowser/qutebrowser.nix;
+ ncmpcpp = import ./ncmpcpp/ncmpcpp.nix;
  zsh = zshsettings pkgs;
 }

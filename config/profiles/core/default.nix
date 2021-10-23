@@ -60,7 +60,6 @@
   security = {
     protectKernelImage = true;
   };
-
   
   system.stateVersion = "21.05";  
 }

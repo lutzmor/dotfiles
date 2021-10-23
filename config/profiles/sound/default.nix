@@ -4,7 +4,15 @@
 
     security.rtkit.enable = true;
     hardware.bluetooth.enable = true;
-    hardware.bluetooth.hsphfpd.enable = true;
+    hardware.bluetooth.powerOnBoot = true;
+    hardware.bluetooth.settings = {
+      "Policy" = {
+	"AutoEnable" = true;
+      };
+      "General" = {
+        "DiscoverableTimeout" = 0;
+      };
+    };
     hardware.pulseaudio.enable = false;
     services.pipewire = {
         enable = true;

@@ -1,6 +1,5 @@
 # autostart
-exec 			udiskie
-exec 			gammastep
+exec			/home/espo/.bin/mopidy.sh
 
 # style
 font 			            pango:monospace 16px 
@@ -77,7 +76,7 @@ set 	$term 	kitty
 
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set 	$menu 	wofi | xargs swaymsg exec --
+set 	$menu 	wofi run | xargs swaymsg exec --
 
 ## Output configuration
 # Default wallpaper 

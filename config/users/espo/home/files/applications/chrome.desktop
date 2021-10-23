@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=/bin/sh /home/espo/.bin/chrome.sh
+Hidden=false
+NoDisplay=false
+Name=Google Chrome

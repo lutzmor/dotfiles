@@ -28,6 +28,8 @@
       git-crypt
       fido2luks
       tmux
+      mpc_cli
+      libnotify
     ];
     
     fonts.fonts = with pkgs; [
@@ -44,6 +46,5 @@
     services.tlp.enable = true;
     services.thermald.enable = true;
     services.upower.enable = lib.mkDefault true;
-    powerManagement.powertop.enable = true;
     powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 }

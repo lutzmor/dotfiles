@@ -16,10 +16,10 @@
       name = "ms-surface/0003-ath10k";
       patch = patches + "/5.14/0003-ath10k.patch";
     }
-    {
-      name = "ms-surface/0004-ipts";
-      patch = patches + "/5.14/0004-ipts.patch";
-    }
+    #{
+    #  name = "ms-surface/0004-ipts";
+    #  patch = patches + "/5.14/0004-ipts.patch";
+    #}
     {
       name = "ms-surface/0005-surface-sam";
       patch = patches + "/5.14/0005-surface-sam.patch";
