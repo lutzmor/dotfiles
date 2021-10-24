@@ -16,10 +16,10 @@
       name = "ms-surface/0003-ath10k";
       patch = patches + "/5.14/0003-ath10k.patch";
     }
-    #{
-    #  name = "ms-surface/0004-ipts";
-    #  patch = patches + "/5.14/0004-ipts.patch";
-    #}
+    {
+      name = "ms-surface/0004-ipts";
+      patch = patches + "/5.14/0004-ipts.patch";
+    }
     {
       name = "ms-surface/0005-surface-sam";
       patch = patches + "/5.14/0005-surface-sam.patch";
@@ -43,14 +43,6 @@
     {
       name = "ms-surface/0010-cameras";
       patch = patches + "/5.14/0010-cameras.patch";
-    }
-    {
-      name = "ms-surface/0011-amd-gpio";
-      patch = patches + "/5.14/0011-amd-gpio.patch";
-    }
-    {
-      name = "ms-surface/0012-amd-s0ix";
-      patch = patches + "/5.14/0012-amd-s0ix.patch";
     }
   ];
   
