@@ -36,25 +36,26 @@
   fileSystems."/home" =
     { device = "/dev/mapper/enc";
       fsType = "btrfs";
-      options = [ "subvol=home" ];
+      options = [ "subvol=home" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/nix" =
     { device = "/dev/mapper/enc";
       fsType = "btrfs";
-      options = [ "subvol=nix" ];
-    };
-
-  fileSystems."/persist" =
-    { device = "/dev/mapper/enc";
-      fsType = "btrfs";
-      options = [ "subvol=persist" ];
+      options = [ "subvol=nix" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/var/log" =
     { device = "/dev/mapper/enc";
       fsType = "btrfs";
-      options = [ "subvol=log" ];
+      options = [ "subvol=log" "compress=zstd" "noatime" ];
+      neededForBoot = true;
+    };
+
+  fileSystems."/persist" =
+    { device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=persist" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/boot" =
