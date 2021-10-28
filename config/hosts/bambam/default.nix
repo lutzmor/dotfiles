@@ -33,6 +33,12 @@
    };
   };
   
+  fileSystems."/" =
+    { device = "/dev/mapper/enc";
+      fsType = "btrfs";
+      options = [ "subvol=nixos" "compress=zstd" "autodefrag" "noatime"];
+    };
+  
   fileSystems."/home" =
     { device = "/dev/mapper/enc";
       fsType = "btrfs";
