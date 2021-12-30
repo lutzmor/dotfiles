@@ -39,6 +39,8 @@ let
         mkdir -p ${targetDir}/dotfiles
         git clone ${repoUrl} ${targetDir}/dotfiles
     fi
+    
+    cd ${targetDir}/dotfiles
 
     ${pkgs.lib.optionalString pkgs.stdenvNoCC.isDarwin darwin} "$@"
   '';
