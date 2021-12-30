@@ -82,10 +82,6 @@ in pkgs.stdenvNoCC.mkDerivation {
                 ${unlink}
                 exit
                 ;;
-            rebuild)
-                ${rebuild} "$@"
-                exit
-                ;;
             help)
                 echo "dotfiles: [help] [install machine-name] [uninstall]"
                 exit
