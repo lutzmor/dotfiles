@@ -1,4 +1,4 @@
-Nixos Stuff
+Nixos Stuff ( still wip )
 
 - surface related in compute 1/2
 - macbook in suiko ( osx )
