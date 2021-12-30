@@ -19,6 +19,10 @@ in {
     o = "open";
   };
 
+  environment.variables = {
+    NIXOS_CONFIG_DIR="/Users/espo/.config/nix/";
+  };
+
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     builders = @/etc/nix/machines
