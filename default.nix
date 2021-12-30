@@ -6,7 +6,7 @@
 }:
 
 let
-  rebuildCmd = "${if pkgs.stdenvNoCC.isDarwin then "darwin" else "nixos"}-rebuild";
+  rebuildCmd = "${if pkgs.stdenvNoCC.isDarwin then "darwin" else "nixos"}-rebuild --flake $HOME/wrk/dotfiles/.#$1";
   darwin = ''
     echo >&2
     echo >&2 "Building initial configuration..."
