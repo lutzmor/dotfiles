@@ -34,10 +34,10 @@ let
     fi
     ''}
 
-    if [ ! -d ${targetDir}/dotfiles ]; then
+    if [ ! -d ${targetDir}/nixos ]; then
         echo "Setting up dotfiles repository" >&2
-        mkdir -p ${targetDir}/dotfiles
-        git clone ${repoUrl} ${targetDir}/dotfiles
+        mkdir -p ${targetDir}/nixos
+        git clone ${repoUrl} ${targetDir}/nixos
     fi
 
     ${pkgs.lib.optionalString pkgs.stdenvNoCC.isDarwin darwin} "$@"
