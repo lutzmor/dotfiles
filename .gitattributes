@@ -1,1 +1,0 @@
-config/hosts/bambam/encryption.nix filter=git-crypt diff=git-crypt
