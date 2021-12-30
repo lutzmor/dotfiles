@@ -18,6 +18,7 @@
     casks = [
       "discord-canary" # chat client of choice
       "via" # keyboard config
+      "intellij-idea-ce" # intellij community
     ];
   };
 }

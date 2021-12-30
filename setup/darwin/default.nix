@@ -11,6 +11,7 @@ in {
     ./bloop.nix
     ./homebrew.nix
     ./fonts.nix
+    ./packages.nix
   ];
   
   environment.systemPackages = [ pkgs.zsh pkgs.gcc ];

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/bin/sh /home/espo/.bin/headset.sh
-Hidden=false
-NoDisplay=false
-Name=Headset connect
-Comment=Connect my headset

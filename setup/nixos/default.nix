@@ -5,6 +5,13 @@
     ../common
     ./openssh.nix
   ];  
+  
+  users.users.espo = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
+    initialPassword = "hello";
+  };
 
   networking = {
     networkmanager.enable = true;
