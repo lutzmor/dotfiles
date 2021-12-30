@@ -40,7 +40,7 @@ let
         git clone ${repoUrl} ${targetDir}/dotfiles
     fi
 
-    ${pkgs.lib.optionalString pkgs.stdenvNoCC.isDarwin darwin} "$@"
+    ${pkgs.lib.optionalString pkgs.stdenvNoCC.isDarwin darwin}
   '';
   unlink = pkgs.writeScript "unlink" ''
     set -e
@@ -52,6 +52,11 @@ let
     if test -e /etc/nixos; then sudo rm /etc/nixos; fi
     if test -e /etc/nixos.bak; then sudo mv /etc/nixos.bak /etc/nixos; fi
   '';
+
+rebuild = pkgs.writeScript "rebuild" ''
+  /run/current-system/sw/bin/darwin-rebuild switch --flake $HOME/wrk/dotfiles/.#$1
+'';
+
 in pkgs.stdenvNoCC.mkDerivation {
   name = "dotfiles";
   preferLocalBuild = true;
@@ -65,7 +70,7 @@ in pkgs.stdenvNoCC.mkDerivation {
     echo "$shellHook" > $out/bin/dotfiles
     chmod +x $out/bin/dotfiles
   '';
-
+  
   shellHook = ''
     set -e
 
@@ -79,6 +84,10 @@ in pkgs.stdenvNoCC.mkDerivation {
                 ;;
             uninstall)
                 ${unlink}
+                exit
+                ;;
+            rebuild)
+                ${rebuild} "$@"
                 exit
                 ;;
             help)
