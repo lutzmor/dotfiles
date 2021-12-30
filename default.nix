@@ -6,7 +6,7 @@
 }:
 
 let
-  rebuildCmd = "${if pkgs.stdenvNoCC.isDarwin then "darwin" else "nixos"}-rebuild --flake $HOME/wrk/dotfiles/.#$1";
+  rebuildCmd = "${if pkgs.stdenvNoCC.isDarwin then "darwin" else "nixos"}-rebuild";
   darwin = ''
     echo >&2
     echo >&2 "Building initial configuration..."
@@ -52,10 +52,6 @@ let
     if test -e /etc/nixos; then sudo rm /etc/nixos; fi
     if test -e /etc/nixos.bak; then sudo mv /etc/nixos.bak /etc/nixos; fi
   '';
-
-rebuild = pkgs.writeScript "rebuild" ''
-  /run/current-system/sw/bin/darwin-rebuild switch --flake $HOME/wrk/dotfiles/.#$1
-'';
 
 in pkgs.stdenvNoCC.mkDerivation {
   name = "dotfiles";
