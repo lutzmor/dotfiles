@@ -14,7 +14,7 @@ let
     #FIXME #OMG
     if test -n $TRAVIS_OS_NAME; then sudo launchctl kickstart system/org.nixos.nix-daemon; fi
     if test -e /etc/static/bashrc; then . /etc/static/bashrc; fi
-    /run/current-system/sw/bin/darwin-rebuild switch --flake $HOME/wrk/dotfiles/machines/$1
+    /run/current-system/sw/bin/darwin-rebuild switch --flake $HOME/wrk/dotfiles/.#$1
   '';
   install = pkgs.writeScript "install" ''
     set -e
