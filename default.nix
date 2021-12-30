@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {}
 , machine ? "suiko"
-, repoUrl ? "https://github.com/lutzmor/nixos.git"
+, repoUrl ? "https://github.com/lutzmor/dotfiles.git"
 , channel ? "nixpkgs-unstable"
 , targetDir ? "$HOME/wrk"
 }:
@@ -34,10 +34,10 @@ let
     fi
     ''}
 
-    if [ ! -d ${targetDir}/nixos ]; then
+    if [ ! -d ${targetDir}/dotfiles ]; then
         echo "Setting up dotfiles repository" >&2
-        mkdir -p ${targetDir}/nixos
-        git clone ${repoUrl} ${targetDir}/nixos
+        mkdir -p ${targetDir}/dotfiles
+        git clone ${repoUrl} ${targetDir}/dotfiles
     fi
 
     ${pkgs.lib.optionalString pkgs.stdenvNoCC.isDarwin darwin} "$@"
