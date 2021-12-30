@@ -30,20 +30,20 @@
 
     # increase region
     ${modMask} + ctrl - j		      : ${prefix} window --resize right:-20:0; \
-						${prefix} window --resize left:-20:0 
+						${prefix} window --resize left:-20:0
     ${modMask} + ctrl - k	 	      : ${prefix} window --resize right:20:0; \
 						${prefix} window --resize left:20:0
     # spaces ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-    # switch 
+    # switch
     ${modMask} + alt - j                      : ${prevOrLast "space"}
     ${modMask} + alt - k                      : ${nextOrFirst "space"}
 
-    # send window 
-    ${modMask} + ${moveMask} - j              : ${prefix} window --space prev
-    ${modMask} + ${moveMask} - k              : ${prefix} window --space next
+    # send window
+    ${modMask} + ctrl + alt - j              : ${prefix} window --space prev
+    ${modMask} + ctrl + alt - k              : ${prefix} window --space next
 
     # display  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-    # focus 
+    # focus
     ${modMask} - left                         : ${prevOrLast "display"}
     ${modMask} - right                        : ${nextOrFirst "display"}
 
@@ -52,7 +52,7 @@
     ${moveMask} - left                        : ${prefix} window --display next
 
     # apps  ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-    ${modMask} - return                       : ${myTerminal} 
+    ${modMask} - return                       : ${myTerminal}
     ${modMask} + shift - return               : ${myEditor}
     ${modMask} - b                            : ${myBrowser}
 
