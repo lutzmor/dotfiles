@@ -18,6 +18,7 @@ in {
     ./packages.nix
     ./shells.nix
     ./tmux.nix
+		./chat.nix
   ];
 
   #peel.secrets.enable = true;
