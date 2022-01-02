@@ -1,0 +1,126 @@
+# This is a demo config to bring across some of the most important commands more easily.
+#
+############## BAR ##############
+sketchybar -m --bar height=28        \
+		    y_offset=10			\
+		    margin=19 			 \
+                    position=top     \
+		    corner_radius=10 \
+                    color=0xFF2E3440
+
+############## GLOBAL DEFAULTS ##############
+sketchybar -m --default updates=when_shown                    \
+                        drawing=on                            \
+                        cache_scripts=on                      \
+                        icon.font="Liga SFMono Nerd Font:Bold:17.0"  \
+                        icon.color=0xffffffff                 \
+                        label.font="Liga SFMono Nerd Font:Bold:14.0" \
+                        label.color=0xffffffff
+
+############## SPACE DEFAULTS ##############
+sketchybar -m --default label.padding_left=2  \
+                        label.padding_right=2 \
+                        icon.padding_left=8   \
+                        label.padding_right=8
+
+############## PRIMARY DISPLAY SPACES ##############
+sketchybar -m --add space code_1 left                              \
+              --set code_1 associated_space=1                      \
+                         associated_display=1                    \
+                         icon.font="Liga SFMono Nerd Font:Bold:20.0"    \
+                         icon=                                \
+                         icon.color=0xFFD8DEE9 \
+			 icon.highlight_color=0xFF88C0D0         \
+                         click_script="yabai -m space --focus 1" \
+			 background.color=0xFFB48EAD \
+                	 background.height=22 \
+                	 background.corner_radius=10 \
+                	 label.padding_right=7 \
+                	 label.padding_left=2 \
+              --add item space_blank_1 left                          \
+              --add space web_1 left                               \
+              --set web_1  associated_display=1                    \
+                         associated_space=2                      \
+                         icon.color=0xFFD8DEE9 \
+			 icon.highlight_color=0xFF88C0D0         \
+                         icon=                                 \
+                         click_script="yabai -m space --focus 2" \
+			 background.color=0xFFB48EAD \
+			 background.height=22 \
+                	 background.corner_radius=10 \
+                	 label.padding_right=7 \
+                	 label.padding_left=2 \
+	      --add item space_blank_2 left                          \
+	      --add space ide_1 left \
+	      --set ide_1  associated_display=1                    \
+                         associated_space=3                      \
+                         icon.color=0xFFD8DEE9 \
+                         icon.highlight_color=0xFF88C0D0         \
+                         icon=                                \
+                         click_script="yabai -m space --focus 3" \
+                         background.color=0xFFB48EAD \
+                         background.height=22 \
+                         background.corner_radius=10 \
+                         label.padding_right=7 \
+                         label.padding_left=2 \
+	      --add item space_blank_3 left \
+              --add space misc_1 left                               \
+              --set misc_1  associated_display=1                    \
+                         associated_space=4                      \
+                         icon.color=0xFFD8DEE9 \
+                         icon.highlight_color=0xFF88C0D0         \
+                         icon=                                 \
+                         click_script="yabai -m space --focus 4" \
+                         background.color=0xFFB48EAD \
+                         background.height=22 \
+                         background.corner_radius=10 \
+                         label.padding_right=7 \
+                         label.padding_left=2 
+
+############## RIGHT ITEMS ##############
+sketchybar -m --add item clock right  \
+              --set clock update_freq=10  \
+                script="~/.config/sketchybar/plugins/clock.sh" \
+                background.color=0xFFB48EAD \
+                background.height=22 \
+                background.corner_radius=10 \
+                label.padding_right=12 \
+                label.padding_left=2
+
+sketchybar -m --add item blank_right_1 right
+
+sketchybar -m --add item mem right \
+	      --set mem update_freq=10 \
+		script="~/.config/sketchybar/plugins/mem.sh" \
+		background.color=0xFFB48EADo \
+                background.height=22 \
+                background.corner_radius=10 \
+                label.padding_right=12 \
+                label.padding_left=2
+
+sketchybar -m --add item blank_right_2 right
+
+sketchybar -m --add item cpu right \
+              --set cpu update_freq=10 \
+                script="~/.config/sketchybar/plugins/cpu.sh" \
+                background.color=0xFFB48EAD \
+                background.height=22 \
+                background.corner_radius=10 \
+                label.padding_right=12 \
+                label.padding_left=2
+
+sketchybar -m --add item blank_right_3 right
+
+sketchybar -m --add item battery right \
+              --set battery update_freq=10 \
+                script="~/.config/sketchybar/plugins/battery.sh" \
+                background.color=0xFFB48EAD \
+                background.height=22 \
+                background.corner_radius=10 \
+                label.padding_right=12 \
+                label.padding_left=2
+
+############## FINALIZING THE SETUP ##############
+sketchybar -m --update
+
+echo "sketchybar configuration loaded.."
