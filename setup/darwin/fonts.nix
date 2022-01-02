@@ -6,7 +6,7 @@ let
 in {
   fonts = {
     enableFontDir = true;
-    fonts = [pragmatapro sf-liga-mono-bin ];
+    fonts = with pkgs; [ pragmatapro sf-liga-mono-bin ];
   } // lib.optionalAttrs pkgs.stdenvNoCC.isLinux {
     fontconfig.enable = true;
     fontconfig.dpi = 180;

@@ -21,7 +21,6 @@ in {
 		./chat.nix
   ];
 
-  #peel.secrets.enable = true;
   nix.binaryCaches = builtins.map (x: x.url) caches;
   nix.binaryCachePublicKeys = builtins.map (x: x.key) caches;
   time.timeZone = "Europe/Berlin";

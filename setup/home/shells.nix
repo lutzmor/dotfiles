@@ -42,6 +42,7 @@ pkgs:
       initExtra = ''
           PROMPT=' %{$fg_bold[blue]%}$(get_pwd)%{$reset_color%} ''${prompt_suffix}'
           local prompt_suffix="%(?:%{$fg_bold[green]%}❯ :%{$fg_bold[red]%}❯%{$reset_color%} "
+					eval "$(direnv hook zsh)"
           function get_pwd(){
               git_root=$PWD
               while [[ $git_root != / && ! -e $git_root/.git ]]; do
