@@ -1,5 +1,8 @@
 Nixos Stuff ( still wip )
 
-- surface related in compute 1/2
-- macbook in suiko ( osx )
-- linux on macbook pro t2 in macbook
+- kubernetes device in maschines/compute1 ( to be done )
+- file storage in maschines/compute2 ( to be done )
+
+- macbook pro in maschines/suiko ( osx )
+- macbook pro m1 in maschines/kimmie ( osx )
+- thinkpad x260 in maschines/tux ( to be done )
