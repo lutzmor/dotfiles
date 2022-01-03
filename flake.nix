@@ -22,6 +22,18 @@
         }
       ];      
     };
+    darwinConfigurations.kimmei = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      modules = [
+        ./machines/kimmei/configuration.nix
+        ./setup/home/default.nix
+        home.darwinModule
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        }
+      ];
+    };
     nixosConfigurations.macbook = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

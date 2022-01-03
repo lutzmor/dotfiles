@@ -21,6 +21,7 @@
      finder = {
        AppleShowAllExtensions = true;
        FXEnableExtensionChangeWarning = false;
+       CreateDesktop = false;
      };
      trackpad = {
        Clicking = true;
