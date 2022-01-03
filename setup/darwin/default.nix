@@ -12,6 +12,7 @@ in {
     ./homebrew.nix
     ./fonts.nix
     ./packages.nix
+    ./pam.nix
   ];
   
   environment.systemPackages = [ pkgs.zsh pkgs.gcc ];
