@@ -12,6 +12,9 @@ pkgs:
         kc = "kubectx";
         kn = "kubens";
         t = "cd $(mktemp -d)";
+				db = "cd ~/.nixpkgs && make && cd -";
+				ds = "cd ~/.nixpkgs && make switch && cd -";
+				dp = "cd ~/.nixpkgs && make update && cd -";
       };
 
       oh-my-zsh.enable = true;
