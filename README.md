@@ -8,7 +8,7 @@
 - thinkpad x260 in maschines/tux ( to be done )
 
 ### Install
-export HOSTNAME=xxx
-./install.sh
-disable SIP
-sudo yabai --install-sa
+- export HOSTNAME=xxx
+- ./install.sh
+- disable SIP
+- sudo yabai --install-sa
