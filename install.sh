@@ -32,3 +32,6 @@ cp -r config/yabai ~/.config/
 codesign -fs 'yabai-cert' /usr/local/bin/yabai
 brew service start yabai
 echo "Disable sip and do yabai --install-sa"
+
+nix-build ~/.nixpkgs\#darwinConfiguration.$HOSTNAME.system --extra-experimental-features nix-command --extra-experimental-features flakes
+./result/sw/bin/darwin-rebuild switch --flake .#$HOSTNAME
