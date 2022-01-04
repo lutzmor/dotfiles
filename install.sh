@@ -30,4 +30,5 @@ brew install koekeishiya/formulae/yabai --HEAD
 sudo echo "espo > ALL = (root) NOPASSWD: /usr/local/bin/yabai --load-sa" > /private/ettc/sudoers.d/yabai
 cp -r config/yabai ~/.config/
 codesign -fs 'yabai-cert' /usr/local/bin/yabai
+brew service start yabai
 echo "Disable sip and do yabai --install-sa"
