@@ -18,7 +18,7 @@ in {
     ./packages.nix
     ./shells.nix
     ./tmux.nix
-		./chat.nix
+    ./chat.nix
   ];
 
   nix.binaryCaches = builtins.map (x: x.url) caches;
