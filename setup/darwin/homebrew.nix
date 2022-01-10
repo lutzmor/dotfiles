@@ -3,6 +3,7 @@
   homebrew = {
     enable = true;
     autoUpdate = true;
+    prefix = if stdenv.aarch64 then "/opt/local/homebrew" else "/usr/local/bin";
     cleanup = "none"; # keep it clean
     global = {
       brewfile = true;
